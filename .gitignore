@@ -1,0 +1,10 @@
+*.swp
+*.idea/
+*.vscode/
+*.ropeproject/
+*__pycache__/
+*.pyc
+*.spec
+Pipfile.lock
+result/
+.env
