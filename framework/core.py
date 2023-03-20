@@ -68,7 +68,8 @@ async def main():
                 logger.debug(f"创建 {coll_string} 对比任务")
                 db, coll = get_coll_meta(coll_string)
                 tg.create_task(DataCheck(
-                    db_name=db, collection=coll).start(), name=f"DataCheck-{db}.{coll}")
+                    db_name=db, collection=coll,
+                    concurrent=settings.check_batch_size).start(), name=f"DataCheck-{db}.{coll}")
 
 
 def run():

@@ -66,6 +66,7 @@ class Settings(BaseSettings):
     check_collections: list[str] = []
 
     task_concurrent: int = 2
+    check_batch_size: int = 50
 
 
 @lru_cache()
