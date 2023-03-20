@@ -48,7 +48,7 @@ class Settings(BaseSettings):
     # 如果env_file传入元祖或列表，则后面的文件优先级高。
     # 如： env_file = '.env', '.env.prod'
     class Config(BaseConfig):
-        env_file = ".env", "etc/.env", "etc/config.env"
+        env_file = "etc/config.env", "etc/.env", ".env"
         env_file_encoding = 'utf-8'
 
         # 处理自定义字段配置内容
