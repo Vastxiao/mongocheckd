@@ -137,7 +137,7 @@ class DataCheck:
             await self.check_success_fobj.write(f"{data_id_str} {data_id_type}\n")
         else:
             result = await asyncio.to_thread(DeepDiff, src_data, dst_data)
-            await self.check_failure_fobj.write(f"{data_id_type} {data_id_type} {result}\n")
+            await self.check_failure_fobj.write(f"{data_id_str} {data_id_type} {result}\n")
 
     async def flush_fobj_and_close(self):
         await self.check_success_fobj.flush()
